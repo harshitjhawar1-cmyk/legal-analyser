@@ -7,14 +7,19 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0f; color: #f0f0f4; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-    .card { max-width: 560px; width: 100%; padding: 56px 48px; border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; background: #111118; text-align: center; }
+    .card { max-width: 580px; width: 100%; padding: 56px 48px; border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; background: #111118; text-align: center; }
     .icon { width: 64px; height: 64px; background: linear-gradient(135deg, #0ea5e9, #6366f1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 28px; }
     h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 12px; }
-    p { color: #888; font-size: 1rem; line-height: 1.6; margin-bottom: 32px; }
-    .tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px; }
+    p { color: #888; font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 32px; }
     .tag { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500; background: rgba(255,255,255,0.06); color: #aaa; border: 1px solid rgba(255,255,255,0.08); }
-    .btn { display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #0ea5e9, #6366f1); color: #fff; font-size: 0.95rem; font-weight: 600; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
-    .btn:hover { opacity: 0.85; }
+    .notice { background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.3); border-radius: 12px; padding: 14px 18px; font-size: 0.85rem; color: #7dd3fc; margin-bottom: 28px; line-height: 1.5; }
+    .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 10px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary { background: #000; color: #fff; border: 1px solid rgba(255,255,255,0.15); }
+    .btn-primary:hover { opacity: 0.8; }
+    .btn-secondary { background: rgba(255,255,255,0.06); color: #ddd; border: 1px solid rgba(255,255,255,0.1); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
   </style>
 </head>
 <body>
@@ -28,7 +33,14 @@
       <span class="tag">Claude AI</span>
       <span class="tag">Tailwind CSS</span>
     </div>
-    <a href="https://github.com/harshitjhawar1-cmyk/legal-analyser" class="btn">View on GitHub →</a>
+    <div class="notice">⚡ This is a Next.js app with AI APIs. Deploy it to Vercel for free to run it live. Requires an Anthropic API key.</div>
+    <div class="buttons">
+      <a href="https://vercel.com/new/clone?repository-url=https://github.com/harshitjhawar1-cmyk/legal-analyser" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 76 76" fill="currentColor"><path d="M38 0L76 66H0L38 0z"/></svg>
+        Deploy to Vercel
+      </a>
+      <a href="https://github.com/harshitjhawar1-cmyk/legal-analyser" class="btn btn-secondary">View Source →</a>
+    </div>
   </div>
 </body>
 </html>
